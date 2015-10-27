@@ -3,7 +3,11 @@
 #painless connection to shh with java
 
 
-Example
+Little Example...
+**doSshTunnel()** create the ssh tunneling and execute the port forwarding
+**TestRun()** collect all needed IP's, String's and creditals and execute the mySQl connection
+ 
+
 ```java
 
 import java.io.FileOutputStream;
@@ -51,21 +55,12 @@ public class Test {
 	}
 
 	public static void TestRun() throws ParseException {
-		Scanner in = new Scanner(System.in);
-		System.out.println("Input additional filename");
-		String file = in.nextLine();
-		System.out.println("Input catalog ID");
-		String catalogID = in.nextLine();
-		in.close();
-		System.out.println("Write to file " + file);
-		System.out.println("Catalog with ID " + catalogID + " will be parsed now");
-
 		Connection conn = null;
 		Statement stmt = null;
 
 		String strSshUser = "username";
 		String strSshPassword = "passwort";
-		String strSshHost = "10.10.10.10";
+		String strSshHost = "123.0.0.123";
 		int nSshPort = 22;
 		int nLocalPort = 3306;
 		int nRemotePort = 3306;
