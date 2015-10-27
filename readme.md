@@ -67,7 +67,7 @@ public class Test {
 		String strRemoteHost = "127.0.0.1";
 		System.out.println("Connecting to SHH...");
 		try {
-				PackageExport.doSshTunnel(strSshUser, strSshPassword, strSshHost, nSshPort, strRemoteHost, nLocalPort,nRemotePort);
+				Test.doSshTunnel(strSshUser, strSshPassword, strSshHost, nSshPort, strRemoteHost, nLocalPort,nRemotePort);
 			} catch (Exception e) {
 				System.exit(0);
 			}
